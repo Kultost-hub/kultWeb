@@ -298,11 +298,6 @@ function Dastr() {
 		letter7.remove();
 	}, 3000);
 }
-
-function toggleMute() {
-    var audio = document.getElementById("mm");
-    audio.muted = !audio.muted;
-}
 function triggerScreamer() {
     const screamerImage = document.getElementById('screamer-image');
     screamerImage.style.display = 'block';    
