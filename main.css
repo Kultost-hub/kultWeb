@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/* general styling */
+:root {
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { zoom: 90%; }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    height: 100%;
+    background: 
+    linear-gradient(to bottom, rgba(5, 42, 50), rgba(5, 17, 24)),
+    linear-gradient(rgba(5, 17, 24), rgba(5, 17, 24) );
+  display: flex;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+}
+.letter {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 20px;
+    font-family: monospace;
+    pointer-events: none; /* Чтобы не мешали кликам */
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+.container1 {
+  color: oklab(84.028% 0.01779 0.17146);
+  margin: 0 auto;
+  text-align: center;
+}
+.container2 {
+  color: oklab(100% 0 -0.00011);
+  margin: 0 auto;
+  text-align: center;
+  padding: 0rem 0rem 1rem
+}
+.jox {
+  opacity: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.board {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+h1 {
+  font-size: 2.125em;
+  list-style-type: none;
+  text-transform: uppercase;
+  padding: 0.1em 0em 0em;
+}
+
+/* размер текста под таймером */
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 0.4em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+:root {
+  --tileSize: 60px;
+  --boardSize: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+}
+*::-moz-selection {
+  background: rgba(127, 140, 141, 0.6);
+}
+*::selection {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.imgs {
+  display:none; 
+  width:100%; 
+  height:auto;
+}
+
+.btn {
+  background: #2b2020;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #969696;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: inset 0 2px 0 #e7e7e7, inset 0 -2px 0 #bcbcbc, inset 2px 0 0 #e7e7e7, inset -2px 0 0 #bcbcbc;
+  text-shadow: 0 1px 0 #efefef, 0 -1px 0 #7c7c7c;
+}
+.btn:hover {
+  background: #d5d5d5;
+  transform: translateY(-1px);
+}
+.btn:active {
+  background: #000000;
+  transform: translateY(1px);
+}
+
+.endscreen {
+  position: fixed;
+  background: #ffffff;
+  padding: 0rem;
+  font-size: 16px;
+  display: none;
+}
+.endscreen.show {
+	display: block;
+}
+.endscreen span {
+	color: green;
+}
+
+.bbb {
+  margin: 0 auto;
+  padding: 1.4rem 0rem 0rem;
+  text-align: center;
+}
+
+.board {
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border: 10px solid transparent;
+  box-sizing: content-box;
+  box-shadow: 0 6px 0 #000000, 0 -6px 0 #000000, 6px 0 0 #000000, -6px 0 0 #000000;
+}
+.board:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  background: #000000;
+  top: -14px;
+  right: -14px;
+  transform: rotate(45deg);
+  z-index: -1;
+  box-shadow: 1px calc(var(--boardSize) * 1.465) 0 #000000;
+}
+.board:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  background: rgb(0, 0, 0);
+  top: -14px;
+  left: -14px;
+  transform: rotate(-45deg);
+  z-index: -1;
+  box-shadow: -1px calc(var(--boardSize) * 1.465) 0 #000000;
+}
+.board .tile {
+  /* (плиты) и */
+  background: #4d6966;
+  width: var(--tileSize);
+  height: var(--tileSize);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--tileSize) * .8);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: background 0.2s ease;
+  box-shadow: inset 0 2px 0 0 #000000, inset 2px 0 0 0 #000000, inset 0 -2px 0 0 #000000, inset -2px 0 0 0 #000000;
+}
+.board .tile:hover:not(.tile--checked) {
+  background: #ffffff;
+}
+.board .tile--checked {
+  /* (пустота ) и */
+  background: #000000;
+  box-shadow: inset 0 1px 0 0 #000000, inset 1px 0 0 0 #000000, inset 0 -1px 0 0 #000000, inset -1px 0 0 0 #000000;
+}
+.board .tile--checked.tile--bomb:before, .board .tile--checked.tile--bomb:after {
+  opacity: 1;
+}
+.board .tile--checked:hover {
+  cursor: default;
+}
+.board .tile--bomb {
+  font-size: calc(var(--tileSize) * .5);
+}
+.board .tile--flagged {
+  font-size: calc(var(--tileSize) * .5);
+}
+
+.settings {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.settings label {
+  font-size: 1.2rem;
+}
+
