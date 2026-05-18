@@ -68,7 +68,7 @@ body {
 }
 
 .bg-image-lines {
-  background-image: url('/imges/bg-line.png');
+  background-image: url('imges/bg-line.png');
   background-repeat: repeat-y; /* Повторять только по вертикали */
   background-position: center;
   z-index: -2;
@@ -84,7 +84,7 @@ body {
     font-family: 'Hel Grotesk Gothiq';
     user-select: none;
     position: center;
-    background-image: url('/imges/skalk.png');
+    background-image: url('imges/skalk.png');
     margin-top: 20px;
     border-radius: 6px;
     border: 3px solid  #05625D;
@@ -105,7 +105,7 @@ body {
 
 .bg {
     background-size: 1000px 70%;
-    background-image: url('/imges/bg-line.png');
+    background-image: url('imges/bg-line.png');
     background-repeat: repeat; /* Повторять только по вертикали */
  /* Повторять только по вертикали */
     background-position: center;
