@@ -18,29 +18,43 @@ input.addEventListener('input', function() {
 
   switch(filter) {
     case 'инертный':
+        if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
+            firstOne.style.display = 'none';}
+        else {
+            document.getElementById('wordFive').style.display = 'block';
+            document.getElementById('wordFive').style.color = 'purple';}
         firstOne.style.display = 'block';
         firstOne.style.color = 'yellow';
         simple.style.display = 'none';
         NushWord = true;
         break;
     case 'дефект':
-        secondtOne.style.display = 'block';
-        secondtOne.style.color = 'white';
-        simple.style.display = 'none';
-        AnekdotWord = true;
-        break;
+        if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
+            secondtOne.style.display = 'none';}
+        else {
+            secondtOne.style.display = 'block';
+            secondtOne.style.color = 'white';
+            simple.style.display = 'none';
+            AnekdotWord = true;
+            break;}
     case 'креза':
-        thirdOne.style.display = 'block';
-        thirdOne.style.color = 'red';
-        simple.style.display = 'none';
-        AlexWord = true;
-        break;
+        if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
+            thirdOne.style.display = 'none';}
+        else {
+            thirdOne.style.display = 'block';
+            thirdOne.style.color = 'red';
+            simple.style.display = 'none';
+            AlexWord = true;
+            break;}
     case 'анафема':
-        fourthOne.style.display = 'block';
-        fourthOne.style.color = 'blue';
-        simple.style.display = 'none';
-        DastrWord = true;
-        break;
+        if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
+            fourthOne.style.display = 'none';}
+        else {
+            fourthOne.style.display = 'block';
+            fourthOne.style.color = 'blue';
+            simple.style.display = 'none';
+            DastrWord = true;
+            break;}
     default:
         simple.style.display = 'block';
   }
