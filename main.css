@@ -1,0 +1,663 @@
+@import url('fff/stylesheet.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*::-moz-selection {
+  background: rgba(127, 140, 141, 0.6);
+}
+*::selection {
+  background: rgba(255, 255, 255, 0.6);
+}
+header h1{
+    text-underline-position: under;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+header a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    font-family: "VT323", monospace;
+    font-size: 1px;
+    word-spacing: 10px;
+    font-size: 10px;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    padding: 14px 0;
+    z-index: 1000;
+}
+header * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    touch-action: none;
+    zoom: 0.9; /* Уменьшает страницу до 90% */
+    font-family: "Oswald", sans-serif;
+    background-color: #f0f2f5;
+    font-weight: 400;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:
+    linear-gradient(to bottom, rgba(5, 42, 50), rgba(5, 17, 24)),
+    linear-gradient(rgba(5, 17, 24), rgba(5, 17, 24) );
+    background-repeat: no-repeat;
+    font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+    overflow-x: hidden;
+
+}
+
+.eyes img {
+    user-select: none;
+    width: 30px; /* Ширина 300px, высота автоматически */
+    height: auto;
+    
+}
+#kultIMG {
+    position: absolute;
+    height: 700;
+    max-height: 10,6rem;
+    max-width: 58rem;
+    top: 390px;
+    left: 380px;
+}
+.kultIMG {
+    position: absolute;
+    height: 700;
+    max-height: 10,6rem;
+    max-width: 58rem;
+    top: 390px;
+    left: 45px;
+}
+.dialog {
+    font-family: 'Saxagan';
+    user-select: none;
+    position: absolute;
+    background-color: black;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 3px solid  #05625D;
+    width: 600px;
+    height: auto;
+    text-align: left;
+    color: white;
+    top: 370px;
+    left: 1000px;
+}
+.card {
+    font-family: 'Hel Grotesk Gothiq';
+    user-select: none;
+    position: center;
+    background-image: url('/imges/skalk.png');
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 3px solid  #05625D;
+    width: 800px;
+    height: 160px;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: white;
+}
+
+.bg {
+    background-size: 1000px 70%;
+    background-image: url('/imges/bg-line.png');
+    background-repeat: repeat; /* Повторять только по вертикали */
+ /* Повторять только по вертикали */
+    background-position: center;
+}
+main {
+    padding-bottom: 100%;
+    margin-left: 370px;
+    margin-right: 370px;
+}
+.main {
+    align-items: center;
+    justify-content: align-items;
+}
+#one {/* 1 глаз */
+    
+    transform: rotate(30deg);
+    position: absolute;
+    top: 400px;
+    left: 40px;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+}
+#InOne img {
+    user-select: none;
+    position: relative;
+    top: -30px;
+    left: 5px;
+    z-index: -1;
+    width: 20px;
+    height: 14px;
+}
+
+#two { /* 2 глаз */
+    user-select: none;
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 100px;
+    left: 113px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InTwo img {
+    position: relative;
+    top: -80px;
+    left: 30px;
+    z-index: -1;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#two img {
+    width: 100px;
+    height: 100px;
+}
+#seven { /* 7 глаз */
+    transform: rotate(30deg);
+    position: absolute;
+    top: 50px;
+    left: -3px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InSeven img {
+    position: relative;
+    top: -130px;
+    left: 40px;
+    z-index: -1;
+    max-height: 80px;
+    max-width: 80px;
+}
+
+#seven img {
+    width: 150px;
+    height: 150px;
+}
+
+#four { /* 4 глаз */
+    transform: rotate(30deg);
+    position: absolute;
+    top: 240px;
+    left: 100px;
+    z-index: -1;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+#InFour img { 
+    position: relative;
+    top: -80px;
+    left: 30px;
+    z-index: -1;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#four img {
+    width: 100px;
+    height: 100px;
+}
+#five { /* 5 глаз над фіол */
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InFive img { 
+    position: relative;
+    top: -67px;
+    left: 23px;
+    z-index: -1;
+    max-height: 45px;
+    max-width: 45px;
+}
+
+#five img {
+    width: 80px;
+    height: 80px;
+}
+#six { /* 6 глаз */
+    transform: rotate(-12deg);
+    position: absolute;
+    top: 175px;
+    left: 30px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InSix img { 
+    position: relative;
+    top: -80px;
+    left: 30px;
+    z-index: -1;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#six img {
+    width: 100px;
+    height: 100px;
+}
+
+#eight { /* 8 глаз */
+    position: absolute;
+
+    transform: rotate(70deg);
+    top: 390px;
+    left: -40px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InEight img { 
+    position: relative;
+    top: -80px;
+    left: 30px;
+    z-index: -1;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#eight img {
+    width: 100px;
+    height: 100px;
+}
+
+#nine { /* 9 глаз */
+    position: absolute;
+    top: 169px;
+    left: 130px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InNine img { 
+    position: relative;
+    top: -110px;
+    left: 30px;
+    z-index: -1;
+    max-height: 75px;
+    max-width: 75px;
+}
+
+#nine img {
+    width: 130px;
+    height: 130px;
+}
+
+#ten { /* 10 глаз */
+    position: absolute;
+    top: -5px;
+    left: -130px;
+    z-index: -1;
+    width: 45px;
+    height: 45px;
+}
+
+#InTen img { 
+    position: relative;
+    top: -42px;
+    left: 0px;
+    z-index: -1;
+    max-height: 27px;
+    max-width: 30px;
+}
+
+#ten img {
+    width: 45px;
+    height: 47px;
+}
+
+#eleven { /* 11 глаз */
+    position: absolute;
+    transform: rotate(30deg);
+    top: 250px;
+    left: 90px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+
+#InEleven img { 
+    position: relative;
+    top: -50px;
+    left: 20px;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+#eleven img {
+    z-index: -1;
+    width: 60px;
+    height: 60px;
+}
+#twelwe {
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 60px;
+    left: 1560px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+#twelwe img { /* 12 глаз */
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+#InTwelwe img { 
+    position: relative;
+    top: -75px;
+    left: 25px;
+    max-height: 40px;
+    max-width: 40px;
+}
+#treet {/* 13 глаз */
+    position: absolute;
+    top: 200px;
+    left: 1560px;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+#treet img {
+    z-index: -1;
+    width: 160px;
+    height: 160px;
+}
+#InTreet img { 
+    position: relative;
+    top: -130px;
+    left: 25px;
+    max-height: 80px;
+    max-width: 80px;
+}
+#fourteen {/* 14 глаз */
+    position: absolute;
+    top: 40px;
+    left: 1360px;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+}
+#fourteen img {
+    z-index: -1;
+    width: 120px;
+    height: 120px;
+}
+#InFourteen img { 
+    position: relative;
+    top: -100px;
+    left: 45px;
+    max-height: 50px;
+    max-width: 60px;
+}
+
+#fif {/* 15 глаз */
+    transform: rotate(-30deg);
+    position: absolute;
+    top: 120px;
+    left: 1620px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#fif img {
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#InFif img { 
+    z-index: -1;
+    position: relative;
+    top: -60px;
+    left: 20px;
+    max-height: 40px;
+    max-width: 45px;
+}
+#fifteen {/* 15 глаз */
+    transform: rotate(50deg);
+    position: absolute;
+    top: 140px;
+    left: 1580px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#fifteen img {
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+}
+#InFifteen img { 
+    z-index: -1;
+    position: relative;
+    top: -70px;
+    left: 20px;
+    max-height: 40px;
+    max-width: 45px;
+}
+#sixteen {/* 16 глаз */
+    transform: rotate(-10deg);
+    position: absolute;
+    top: 40px;
+    left: 1280px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#sixteen img {
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+}
+#InSixteen img { 
+    z-index: -1;
+    position: relative;
+    top: -70px;
+    left: 20px;
+    max-height: 40px;
+    max-width: 45px;
+}
+#seventeen {/* 17 глаз */
+    transform: rotate(-10deg);
+    position: absolute;
+    top: 40px;
+    left: 1460px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#seventeen img {
+    z-index: 1;
+    width: 130px;
+    height: 130px;
+}
+#InSeventeen img { 
+    z-index: -1;
+    position: relative;
+    top: -96px;
+    left: 30px;
+    max-height: 65px;
+    max-width: 75px;
+}
+#eighteen {/* 18 глаз */
+    transform: rotate(65deg);
+    position: absolute;
+    top: 140px;
+    left: 1510px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#eighteen img {
+    z-index: 1;
+    width: 110px;
+    height: 110px;
+}
+#InEighteen img { 
+    z-index: -1;
+    position: relative;
+    top: -80px;
+    left: 30px;
+    max-height: 40px;
+    max-width: 45px;
+}
+#nineteen {/* 19 глаз */
+    transform: rotate(0deg);
+    position: absolute;
+    top: 20px;
+    left: 210px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#nineteen img {
+    z-index: 1;
+    width: 110px;
+    height: 110px;
+}
+#InNineteen img { 
+    z-index: -1;
+    position: relative;
+    top: -80px;
+    left: 30px;
+    max-height: 40px;
+    max-width: 45px;
+}
+
+#twenty {/* 20 глаз */
+    transform: rotate(0deg);
+    position: absolute;
+    top: 270px;
+    left: 1510px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#twenty img {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+}
+#InTwenty img { 
+    z-index: -1;
+    position: relative;
+    top: -44px;
+    left: 15px;
+    max-height: 30px;
+    max-width: 30px;
+}
+#twentyone {/* 20 глаз */
+    transform: rotate(10deg);
+    position: absolute;
+    top: 300px;
+    left: 1530px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+#twentyone img {
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+}
+#InTwentyone img { 
+    z-index: -1;
+    position: relative;
+    top: -85px;
+    left: 30px;
+    max-height: 60px;
+    max-width: 60px;
+}
+.plesen {
+    user-select: none;
+    filter: hue-rotate(-5deg);
+    position: absolute;
+    transform: rotate(15deg);
+    top: -25px;
+    left: -70px;
+    z-index: -2;
+    height: 650px;
+    max-height: 7000px;
+    max-width: 600px;
+}
+
+#second {
+    opacity: 80%;
+    filter: hue-rotate(-100deg);
+    top: 100px;
+    left: -70px;
+    
+}
+#third {
+    transform: rotate(-70deg);
+    position: absolute;
+    margin: auto;
+    padding: auto;
+    top: -160px;
+    left: 1250px;
+}
+.flame {
+    transform: rotate(-50deg);
+    z-index: -10;
+    position: absolute;
+    height: 6600;
+    max-height: 950px;
+    max-width: 7100px;
+    top: 500px;
+    left: 1100px;
+    user-select: none;
+}
+#for {
+    z-index: -10;
+    position: absolute;
+    max-height: 700px;
+    max-width: 600px;
+    top: 10px;
+}
