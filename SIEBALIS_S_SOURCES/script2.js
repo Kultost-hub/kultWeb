@@ -23,11 +23,11 @@ input.addEventListener('input', function() {
         else {
             document.getElementById('wordFive').style.display = 'block';
             document.getElementById('wordFive').style.color = 'purple';}
-        firstOne.style.display = 'block';
-        firstOne.style.color = 'yellow';
-        simple.style.display = 'none';
-        NushWord = true;
-        break;
+            firstOne.style.display = 'block';
+            firstOne.style.color = 'yellow';
+            simple.style.display = 'none';
+            NushWord = true;
+            break;
     case 'дефект':
         if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
             secondtOne.style.display = 'none';}
