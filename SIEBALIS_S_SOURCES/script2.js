@@ -46,6 +46,10 @@ input.addEventListener('input', function() {
   }
   if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
     simple.style.display = 'none';
+    fourthOne.style.display = 'none';
+    thirdOne.style.display = 'none';
+    firstOne.style.display = 'none';
+    secondtOne.style.display = 'none';
     document.getElementById('wordFive').style.display = 'block';
     document.getElementById('wordFive').style.color = 'purple';
   }
