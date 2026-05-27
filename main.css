@@ -1,9 +1,6 @@
 @import url('fff/stylesheet.css');
 @media (max-width: 768px) {
-  body {
-    transform: scale(0.9);
-  }
-}
+
 
 * {
     margin: 0;
