@@ -15,20 +15,17 @@
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-        //do something later when date is reached
         if (distance < 0) {
           document.getElementById("headline").innerText = "Это конец";
           document.getElementById("countdown").style.display = "none";
           document.getElementById("content").style.display = "block";
           clearInterval(x);
         }
-        //seconds
       }, 0)
 }());
 
 function Nush() {
-	// 1. Создаем букву
-	// const alphabet = "Инертный";
+	// Инертный
 	const letter = document.createElement('span');
 	letter.className = 'letter';
 	letter.innerText = 'И'
@@ -60,9 +57,6 @@ function Nush() {
 	const letter8 = document.createElement('span');
 	letter8.className = 'letter';
 	letter8.innerText = 'й'
-	// letter.innerText = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-	// 2. Случайная позиция 
 	
 	letter.style.left = Math.random() * window.innerWidth + 'px';
 	letter.style.top = Math.random() * window.innerHeight + 'px';
@@ -96,8 +90,6 @@ function Nush() {
 	document.body.appendChild(letter6);
 	document.body.appendChild(letter7);
 	document.body.appendChild(letter8);
-
-	// 3. Удаление через 3 секунды
 	setTimeout(() => {
 		letter.remove();
 		letter2.remove();
@@ -110,8 +102,7 @@ function Nush() {
 	}, 500);
 }
 function Anekdot() {
-	// 1. Создаем букву
-	// const alphabet = "Дефект";
+	// Дефект
 	const letter = document.createElement('span');
 	letter.className = 'letter';
 	letter.innerText = 'Д'
@@ -136,7 +127,6 @@ function Anekdot() {
 	letter6.className = 'letter';
 	letter6.innerText = 'т'
 
-	// 2. Случайная позиция
 	letter.style.left = Math.random() * window.innerWidth + 'px';
 	letter.style.top = Math.random() * window.innerHeight + 'px';
 	
@@ -162,7 +152,6 @@ function Anekdot() {
 	document.body.appendChild(letter5);
 	document.body.appendChild(letter6);
 
-	// 3. Удаление через 3 секунды
 	setTimeout(() => {
 		letter.remove();
 		letter2.remove();
@@ -173,8 +162,7 @@ function Anekdot() {
 	}, 500);
 }
 function Alex() {
-	// 1. Создаем букву
-	// const alphabet = "Креза";
+	// Креза
 	const letter = document.createElement('span');
 	letter.className = 'letter';
 	letter.innerText = 'К'
@@ -194,8 +182,6 @@ function Alex() {
 	const letter5 = document.createElement('span');
 	letter5.className = 'letter';
 	letter5.innerText = 'а'
-
-	// 2. Случайная позиция
 	letter.style.left = Math.random() * window.innerWidth + 'px';
 	letter.style.top = Math.random() * window.innerHeight + 'px';
 	
@@ -217,7 +203,6 @@ function Alex() {
 	document.body.appendChild(letter4);
 	document.body.appendChild(letter5);
 
-	// 3. Удаление через 3 секунды
 	setTimeout(() => {
 		letter.remove();
 		letter2.remove();
@@ -227,8 +212,7 @@ function Alex() {
 	}, 500);
 }
 function Dastr() {
-	// 1. Создаем букву
-	// const alphabet = "Анафема";
+	// Анафема
 	const letter = document.createElement('span');
 	letter.className = 'letter';
 	letter.innerText = 'А'
@@ -257,7 +241,7 @@ function Dastr() {
 	letter7.className = 'letter';
 	letter7.innerText = 'а'
 
-	// 2. Случайная позиция
+
 	letter.style.left = Math.random() * window.innerWidth + 'px';
 	letter.style.top = Math.random() * window.innerHeight + 'px';
 	
@@ -287,7 +271,6 @@ function Dastr() {
 	document.body.appendChild(letter6);
 	document.body.appendChild(letter7);
 
-	// 3. Удаление через 3 секунды
 	setTimeout(() => {
 		letter.remove();
 		letter2.remove();
@@ -303,8 +286,6 @@ function triggerScreamer() {
     const screamerImage = document.getElementById('screamer-image');
     screamerImage.style.display = 'block';    
     document.getElementById('jump').style.display = 'none';
-	// setTimeout(triggerScreamer, 1000);
-	// setTimeout(unTriggerScreamer, 1000);
 }
 function unTriggerScreamer() {
 	const sreamerImage = document.getElementById('screamer-image');
@@ -314,8 +295,8 @@ function unTriggerScreamer() {
 }
 console.clear();
 
-let size = 16; // size x size tiles
-let bombFrequency = 0.12; // percentage of bombs
+let size = 16; 
+let bombFrequency = 0.12;
 let tileSize = 25;
 let wins = 0;
 console.log(wins);
@@ -327,7 +308,6 @@ let boardSize;
 const restartBtn = document.querySelectorAll('.btn')[0];
 const endscreen = document.querySelectorAll('.endscreen')[0]
 
-// settings
 const boardSizeBtn = document.getElementById('boardSize');
 const tileSizeBtn = document.getElementById('tileSize');
 const difficultyBtns = document.querySelectorAll('.difficulty');
@@ -340,7 +320,7 @@ let endscreenContent = {win: 'Ты выиграл.', loose: 'Ты проигра
 
 let gameOver = false;
 
-/* clear board */
+
 const clear = () => {
 	console.clear();
 	gameOver = false;
@@ -356,7 +336,6 @@ const clear = () => {
 }
 
 
-/* setup the game */
 const setup = () => {
 	for (let i = 0; i < Math.pow(size, 2); i++) {
 		const tile = document.createElement('div');
@@ -373,10 +352,8 @@ const setup = () => {
 	let x = 0;
 	let y = 0;
 	tiles.forEach((tile, i) => {
-		// set tile coordinates
 		tile.setAttribute('data-tile', `${x},${y}`);
 
-		// add bombs
 		let boolean = Math.random() < bombFrequency;
 		if (boolean) {
 			bombs.push(`${x},${y}`);
@@ -398,13 +375,12 @@ const setup = () => {
 			y++;
 		}
 		
-		/* rightclick */
+
 		tile.oncontextmenu = function(e) {
 			e.preventDefault();
 			flag(tile);
 		}
 		
-		/* leftclick */
 		tile.addEventListener('click', function(e) {
 			clickTile(tile);
 		});
@@ -422,7 +398,7 @@ const setup = () => {
 }
 
 
-/* flag a tile */
+
 const flag = (tile) => {
 	if (gameOver) return;
 	if (!tile.classList.contains('tile--checked')) {
@@ -437,7 +413,7 @@ const flag = (tile) => {
 }
 
 
-/* check if bomb or not */
+
 const clickTile = (tile) => {
 	if (gameOver) return;
 	if (tile.classList.contains('tile--checked') || tile.classList.contains('tile--flagged')) return;
@@ -445,7 +421,6 @@ const clickTile = (tile) => {
 	if (bombs.includes(coordinate)) {
 		endGame(tile);
 	} else {
-		/* check if nearby bomb */
 		let num = tile.getAttribute('data-num');
 		if (num != null) {
 			tile.classList.add('tile--checked');
@@ -463,7 +438,6 @@ const clickTile = (tile) => {
 }
 
 
-/* clicked the right one */
 const checkTile = (tile, coordinate) => {
 	
 	console.log('✔');
@@ -471,7 +445,6 @@ const checkTile = (tile, coordinate) => {
 	let x = parseInt(coords[0]);
 	let y = parseInt(coords[1]);
 	
-	/* check nearby tiles */
 	setTimeout(() => {
 		if (x > 0) {
 			let targetW = document.querySelectorAll(`[data-tile="${x-1},${y}"`)[0];
@@ -513,9 +486,8 @@ const checkTile = (tile, coordinate) => {
 
 
 
-/* Bomb clicked -> end game */
+
 const endGame = (tile) => {
-	// console.log('💣 Booom! Game over.');
 	endscreen.innerHTML = endscreenContent.loose;
 	endscreen.classList.add('show');
 	gameOver = true;
@@ -529,7 +501,7 @@ const endGame = (tile) => {
 	});
 }
 
-// huy 
+// V 
 
 
 const checkVictory = () => {
@@ -539,7 +511,7 @@ const checkVictory = () => {
 		if (!tile.classList.contains('tile--checked') && !bombs.includes(coordinate)) win = false;
 	});
 	if (win) {
-		wins++; // Увеличение счетчика
+		wins++;
 		console.log(wins);
 		endscreen.innerHTML = endscreenContent.win;
 		endscreen.classList.add('show');
@@ -564,31 +536,26 @@ const checkVictory = () => {
 /* start game */
 setup();
 
-/* click button for new game */
+
 restartBtn.addEventListener('click', function(e) {
 	e.preventDefault();
 	clear();
 });
 
-// settings закомить
 
 
 boardSizeBtn.addEventListener('change', function(e) {
-	// console.log(this.value);
 	size = this.value;
 	clear();
 });
 
 tileSizeBtn.addEventListener('change', function(e) {
-	// console.log(this.value);
 	tileSize = this.value;
 	clear();
 });
-//  это чтоб не было ошибки в консоле
 
 difficultyBtns.forEach(btn => {
 	btn.addEventListener('click', function() {
-		// console.log(this.value);
 		bombFrequency = this.value;
 		clear();
 	});
