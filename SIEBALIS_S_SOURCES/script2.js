@@ -1,7 +1,7 @@
-let AlexWord = false;
-let AnekdotWord = false;
-let NushWord = false;
-let DastrWord = false;
+let Word1 = false;
+let Word2 = false;
+let Word3 = false;
+let Word4 = false;
 const input = document.getElementById('myInput');
 const blocks = document.querySelectorAll('.result-block');
 
@@ -10,6 +10,7 @@ const secondtOne = document.getElementById('wordTwo');
 const thirdOne = document.getElementById('wordThree');
 const fourthOne = document.getElementById('wordFour'); 
 const simple = document.getElementById('kultIMG');
+const dstux = document.getElementById('dastlux');
 
 input.addEventListener('input', function() {
   const filter = input.value.toLowerCase().trim();
@@ -21,30 +22,34 @@ input.addEventListener('input', function() {
         firstOne.style.display = 'block';
         firstOne.style.color = 'yellow';
         simple.style.display = 'none';
-        NushWord = true;
+        Word3 = true;
+        break;
+    case 'дастлюксы':
+        dstux.style.display = 'block';
+        simple.style.display = 'none';
         break;
     case 'дефект':
         secondtOne.style.display = 'block';
         secondtOne.style.color = 'white';
         simple.style.display = 'none';
-        AnekdotWord = true;
+        Word2 = true;
         break;
     case 'креза':
         thirdOne.style.display = 'block';
         thirdOne.style.color = 'red';
         simple.style.display = 'none';
-        AlexWord = true;
+        Word1 = true;
         break;
     case 'анафема':
         fourthOne.style.display = 'block';
         fourthOne.style.color = 'blue';
         simple.style.display = 'none';
-        DastrWord = true;
+        Word4 = true;
         break;
     default:
         simple.style.display = 'block';
   }
-  if (AlexWord === true && AnekdotWord === true && NushWord === true && DastrWord === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
+  if (Word1 === true && Word2 === true && Word3 === true && Word4 === true && firstOne.style.display === 'none' && secondtOne.style.display === 'none' && thirdOne.style.display === 'none' && fourthOne.style.display === 'none') {
     simple.style.display = 'none';
     fourthOne.style.display = 'none';
     thirdOne.style.display = 'none';
