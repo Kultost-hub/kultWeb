@@ -101,6 +101,16 @@ body {
     top: 390px;
     left: 375px;
 }
+.dastl {
+    border-radius: 6px;
+    border: 3px solid  #05625D;
+    position: absolute;
+    height: 700;
+    max-height: 10,6rem;
+    max-width: 58rem;
+    top: 390px;
+    left: 465px;
+}
 .kultIMG {
     border: 3px solid  #05625D;
     position: absolute;
