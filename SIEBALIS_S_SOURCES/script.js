@@ -296,7 +296,7 @@ function unTriggerScreamer() {
 console.clear();
 
 let size = 16; 
-let bombFrequency = 0.09;
+let bombFrequency = 0.11;
 let tileSize = 25;
 let wins = 0;
 console.log(wins);
